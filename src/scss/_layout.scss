@@ -10,7 +10,7 @@
     }
 
     &--center-bg {
-        background-image: url("../../distr/img/images/bg_center.jpg");
+        background-image: url("../img/images/bg_center.jpg");
         background-size: cover;
         position: relative;
         height: 1035px;
@@ -66,23 +66,23 @@
     }
 
     &--bg {
-        background-image: url("../../distr/img/images/bg_top.jpg");
+        background-image: url("../img/images/bg_top.jpg");
     }
 
     &--bg1 {
-        background-image: url("../../distr/img/images/bg_top1.jpg");
+        background-image: url("../img/images/bg_top1.jpg");
     }
 
     &--bg2 {
-        background-image: url("../../distr/img/images/bg_top2.jpg");
+        background-image: url("../img/images/bg_top2.jpg");
     }
 
     &--bg3 {
-        background-image: url("../../distr/img/images/bg_top3.jpg");
+        background-image: url("../img/images/bg_top3.jpg");
     }
 
     &--bg4 {
-        background-image: url("../../distr/img/images/bg_top4.jpg");
+        background-image: url("../img/images/bg_top4.jpg");
     }
 
     &--center {
@@ -115,7 +115,7 @@
 .footer {
     @include flex-center;
     width: 100%;
-    background-image: url("../../distr/img/images/bg_footer.jpg");
+    background-image: url("../img/images/bg_footer.jpg");
     background-size: cover;  
     position: relative;      
 }
