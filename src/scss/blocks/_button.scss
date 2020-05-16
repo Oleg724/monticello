@@ -1,0 +1,27 @@
+@import '_mixins.scss';
+
+.btn {
+    width: 190px;
+    height: 49px;
+    @include flex-full-center;
+    border: 1px solid #000000; 
+    text-transform: uppercase;
+    margin: 35px 0 60px 0;
+    color: #000000;
+    
+    &:hover {
+        background-color: #55b7ff;
+        color: #ffffff;
+        cursor: pointer;
+        border: 1px solid #55b7ff;
+        font-weight: 700;
+    }
+
+    &--center {
+        margin: 60px auto 0 auto;
+    }
+
+    &--width-140 {
+        width: 140px;
+    }
+}

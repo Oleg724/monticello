@@ -1,0 +1,252 @@
+@import "./blocks/mixins";
+
+.section {
+    width: 100%;
+    @include flex-center;
+    
+    &--top {   
+        @include flex-align-center-column;
+        height: 100vh;
+    }
+
+    &--center-bg {
+        background-image: url("../../distr/img/images/bg_center.jpg");
+        background-size: cover;
+        position: relative;
+        height: 1035px;
+    }
+
+    &--margin-bottom {
+        margin-bottom: 140px;
+    }
+}
+
+.container-wrapper {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+    ul {
+        bottom: 50%;
+        left: 46%;
+        transform: rotate(90deg);
+    }
+}
+
+.container {
+    width: 1170px;
+
+    &--top {
+        @include space-between;
+        position: absolute;
+        top: 50px;
+        z-index: 2;
+
+        & div:nth-child(1) {
+            order: 0;
+        }
+
+        & div:nth-child(2) {
+            order: 1;
+        }
+
+        & div:nth-child(3) {
+            order: 2;
+        }
+    }
+
+    &--bg,
+    &--bg1,
+    &--bg2,
+    &--bg3,
+    &--bg4 {
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+    }
+
+    &--bg {
+        background-image: url("../../distr/img/images/bg_top.jpg");
+    }
+
+    &--bg1 {
+        background-image: url("../../distr/img/images/bg_top1.jpg");
+    }
+
+    &--bg2 {
+        background-image: url("../../distr/img/images/bg_top2.jpg");
+    }
+
+    &--bg3 {
+        background-image: url("../../distr/img/images/bg_top3.jpg");
+    }
+
+    &--bg4 {
+        background-image: url("../../distr/img/images/bg_top4.jpg");
+    }
+
+    &--center {
+        @include flex-justify-center-column;
+    }
+
+    &--height-none {
+        height: initial;
+        justify-content: initial;
+        align-items: center;
+    }
+
+    &--full-width {
+        width: 100%;
+    }
+
+    &--bottom {
+        width: 770px;
+        height: 524px;
+        @include space-between;
+        align-items: center;
+    }
+}
+
+.logo-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    @include flex-center;
+    width: 100%;
+    background-image: url("../../distr/img/images/bg_footer.jpg");
+    background-size: cover;  
+    position: relative;      
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 100%;
+
+        &--top {
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .container {
+        width: 100%;
+
+        &--top {
+            width: 90%;
+        }
+
+        &--bottom > .logo-wrapper {
+            margin-left: 30px;
+        }
+
+        &--bottom > .social-wrapper {
+            margin-right: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .container {
+
+        &--top {
+
+            & div:nth-child(1) {
+                order: 1;
+            }
+
+            & div:nth-child(2) {
+                order: -1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .container {
+
+        &--bottom {
+            height: 745px;
+            width: 100%;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+    
+        &--bottom > .logo-wrapper,
+        &--bottom > .social-wrapper {
+            margin: 40px;
+        }
+    }
+
+    .section {
+
+        &--margin-bottom {
+            margin-bottom: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .container {
+
+        &--bottom {
+            justify-content: space-between;
+        }
+
+        &--bottom > .logo-wrapper,
+        &--bottom > .social-wrapper {
+            margin: 0 auto;
+        }
+
+        &--bottom > .logo-wrapper {
+            order: 1;
+            align-self: flex-start;          
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    
+    .container {
+
+        &--top {
+
+            & > .logo {
+                display: none;
+            }
+        }
+
+        &--bottom {
+            flex-direction: column;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 590px) {
+    
+    .section {
+
+        &--height-xl {
+            height: 2500px;
+        }
+
+        &--center-bg {
+            height: 770px;
+        }
+    }
+
+    .container {
+
+        &--height-xl {
+            height: 100%;
+        }
+
+        &--bottom {
+            height: 850px;
+            flex-wrap: wrap;
+        }
+    }
+}

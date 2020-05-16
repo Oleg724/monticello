@@ -1,0 +1,14 @@
+.main-title {
+  font-family: "gothambold1", sans-serif;
+  text-transform: uppercase;
+  color: #ffffff; }
+  .main-title__title {
+    font-size: 80px;
+    font-weight: 700;
+    letter-spacing: 9px; }
+  .main-title__subtitle {
+    font-size: 18px;
+    font-family: "GothamBook", sans-serif;
+    letter-spacing: 6px;
+    text-align: center;
+    margin-top: 20px; }

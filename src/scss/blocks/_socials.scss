@@ -1,0 +1,53 @@
+@import "_mixins";
+
+.social {
+    @include space-between;
+    width: 165px;
+
+    &__item {
+        @include flex-full-center;
+        border: 1px solid #ffffff;
+        width: 37px;
+        height: 37px;
+        border-radius: 37px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #ffffff;  // как связать этот элемент
+        }
+
+        &:hover .social__link {
+            color: #7d5cfa;
+        }
+    }
+    
+    &__link {
+        color: #ffffff;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .social {
+        width: 200px;
+
+        &--width-100 {
+            width: 100%;
+        }
+
+        &__item {
+            width: 42px;
+            height: 42px;
+        }
+    }
+
+    .social-wrapper {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .social-wrapper {
+        margin-right: 25px;
+    }
+}

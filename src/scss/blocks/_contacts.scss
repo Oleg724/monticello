@@ -1,0 +1,79 @@
+@import '_mixins.scss';
+
+.contacts-wrapper-wrapper {
+    position: absolute;
+    width: 49%;
+    height: 450px;
+    background-color: #ffffff;
+    top: -60%;
+    left: 24%;
+    @include flex-align-center-column;
+}
+
+.contacts-wrapper {
+    @include flex-row;
+    justify-content: space-around;
+    width: 90%;
+    height: 200px;
+    font-family: "GothamBook", sans-serif;
+    font-size: 18px;
+}
+
+.contacts {
+    width: 50%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &__adress,
+    &__phone,
+    &__mail,
+    &__schedule {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__icon {
+        color: #7e5aff;
+    }
+
+    &__text {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .contacts-wrapper-wrapper {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .contacts-wrapper-wrapper {
+        width: 100%;
+        position: initial;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .contacts-wrapper-wrapper {
+        height: 585px;
+    }
+
+    .contacts-wrapper {
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    .contacts {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contacts-wrapper-wrapper {
+        height: 585px;
+    }
+}

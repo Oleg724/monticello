@@ -1,0 +1,56 @@
+@mixin burger-menu {
+    background: #ffffff;
+    display: block;
+    height: 5px;
+    width: 35px;
+} 
+
+@mixin space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin column-space-between {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-align-center-column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin flex-justify-center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin flex-full-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-left-column {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+@mixin absolute-top {
+    position: absolute;
+    top: 0;
+}

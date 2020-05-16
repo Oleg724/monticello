@@ -1,0 +1,93 @@
+@import '_mixins.scss';
+
+.scroll-list {
+    max-width: 1170px;
+    max-height: 520px;
+    position: relative;
+
+    &__item {
+        position: relative;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        background-color: #ffffff;
+        margin: 0 15px;
+        outline: none;
+        cursor: pointer;
+        width: 360px !important;
+        height: 520px !important;
+
+        &:hover {
+            filter: brightness(60%);
+            transition: all 1s ease;
+        }
+    }
+
+    &__title {
+        font-family: "gothambold1", sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.5;
+    }
+
+    &__text {
+        margin-top: 10px;
+    }
+
+    &__name {
+        width: 70%;
+    }
+
+    &__description {
+        margin: 20px 20px 20px 20px;
+    }
+
+    &__img {
+        max-width: 100%;
+    }
+}
+
+.scroll-list {
+
+    & .slick-track {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+
+    & > .slick-prev,
+    & > .slick-next  {
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
+
+.scroll-list > .slick-prev {
+    left: -75px;
+}
+
+.scroll-list > .slick-next {
+    right: -75px;
+}
+
+@media screen and (max-width: 1200px) {
+    .scroll-list {
+        width: 780px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .scroll-list {
+        width: 360px;
+
+        &__item {
+            margin: 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .scroll-list {
+        width: 100%;
+    }
+}

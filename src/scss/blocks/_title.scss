@@ -1,0 +1,84 @@
+@import '_mixins';
+
+.main-title {
+    font-family: "gothambold1", sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    @include flex-full-center;
+    flex-direction: column;
+
+    &__title {
+        font-size: 80px;
+        font-weight: 700;
+        letter-spacing: 9px;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        font-family: "GothamBook", sans-serif;
+        letter-spacing: 6px;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.title {
+    font-family: "gothambold1", sans-serif;
+    font-size: 44px;
+    text-transform: uppercase;
+    @include flex-align-center-column;
+    margin-bottom: 100px;    
+
+    &:before {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 1px;
+        margin: 100px auto 40px auto;
+        background-color: #000000;
+    }
+
+    &--white {
+        color: #ffffff;
+
+        &:before {
+            background-color: #ffffff;
+        }
+    }
+
+    &--margin-0 {
+        margin-bottom: 50px;
+
+        &:before {
+            margin: 60px auto 30px auto;
+        }
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .main-title {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .main-title {
+
+        &__title {
+            font-size: 60px;
+        } 
+    }
+
+    .title {
+        margin-bottom: 30px;
+        text-align: center;
+
+        &:before {
+            margin-top: 30px;
+        }
+    }
+}

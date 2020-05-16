@@ -1,0 +1,20 @@
+.article-author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 85%;
+  position: absolute;
+  bottom: 18px; }
+  .article-author__info {
+    width: 100%;
+    margin-left: 20px; }
+  .article-author__date {
+    font-size: 14px;
+    font-family: "GothamBook", sans-serif;
+    color: #60bcff; }
+  .article-author__name {
+    text-transform: uppercase; }

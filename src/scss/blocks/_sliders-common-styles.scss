@@ -1,0 +1,112 @@
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-active {
+    outline: none;
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    outline: none;
+
+    &:hover {
+        &:before {
+            color: #4695b9;
+            background-color: #ffffff;
+        }
+    }
+
+    &:before {       
+        font-family: 'Poppins', sans-serif;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 1px solid #ffffff;
+        cursor: pointer;
+        background: transparent;
+        font-size: 20px;
+        display: block;
+        line-height: 2;
+        color: #ffffff;
+        position: absolute;
+        top: 0;
+    }
+}
+
+.slick-prev {
+    &:before {
+        content: '<';
+    }
+}
+
+.slick-next {
+    &:before {
+        content: '>';
+    }
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -80px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    width: 100%;
+    
+    li {
+        position: relative;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        margin: 0 12px;
+        cursor: pointer;
+        
+        button {
+            border: 1px solid #ffffff;
+            border-radius: 50%;
+            background: transparent;
+            display: block;
+            height: 14px;
+            width: 14px;
+            outline: none;
+            color: transparent;
+            cursor: pointer;
+            
+            &:hover {
+                outline: none;
+                
+                &:before {
+                    background-color: #ffffff;
+                }
+            }
+            
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -8px 0 0 -8px;
+                content: '';
+                width: 10px;
+                height: 10px;
+                background-color: transparent;
+                line-height: 20px;
+                text-align: center;
+                opacity: 1;
+                border-radius: 50%;
+            }
+        }
+        &.slick-active button:hover,
+        &.slick-active button:before {
+            background-color: #ffffff;
+        }
+    }
+}

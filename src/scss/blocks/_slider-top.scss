@@ -1,0 +1,29 @@
+#slider-top {
+
+    & > .slick-next {
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &:before {
+            transform: rotate(90deg);
+        }
+    }
+
+    & > .slick-list,
+    & > .slick-slide {
+        outline: none;
+    }
+
+    & > .slick-prev {
+        display: none!important;
+    }
+
+
+}
+
+@media screen and (max-width: 590px) {
+    .slick-dots {
+        display: none !important;
+    }
+}

@@ -1,0 +1,10 @@
+.scroll {
+  position: absolute;
+  bottom: 50px; }
+  .scroll__icon {
+    fill: #ffffff;
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    width: 40px;
+    height: 40px; }

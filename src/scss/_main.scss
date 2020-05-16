@@ -1,0 +1,9 @@
+@import './blocks/blocks.scss';
+@import './blocks/mixins';
+
+
+body {
+    // @include flex-center;
+    font-family: "GothamBook", sans-serif;
+    font-size: 16px;
+}

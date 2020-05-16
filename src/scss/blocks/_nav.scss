@@ -1,0 +1,142 @@
+@import "./mixins";
+
+.nav {
+    @include space-between;
+    width: 600px;
+    align-items: center;
+
+    &__btn {
+        display: none;
+    
+        &:checked ~ .nav {
+            max-height: none;
+        }
+    
+        &:checked ~ .nav__icon .navicon:before {
+            transform: rotate(-45deg);
+            top: 0;                              
+        }
+    
+        &:checked ~ .nav__icon .navicon:after {
+            transform: rotate(45deg);
+            top: 0;                                  
+        }
+    
+        &:checked ~ .nav__icon .navicon {
+            background: transparent;
+        }
+    
+        &:checked ~ .nav__list {
+            display: initial;
+            height: 360px;
+            background: linear-gradient(45deg, #57b8ff, transparent);
+        }
+    }
+
+    .navicon {
+        @include burger-menu;
+        position: relative;
+        margin: 20px 20px;
+        cursor: pointer;
+    
+        &:before,
+        &:after {
+            @include burger-menu;
+            content: "";
+            position: absolute;
+            transition: all .2s ease-out;
+        }
+    
+        &:before {
+            top: 10px;
+        }
+    
+        &:after {
+            top: -10px;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        width: 444%;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    &__icon {
+        user-select: none;
+        display: none;
+    }
+    &__link {
+        font-family: "GothamBook", sans-serif;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #ffffff;
+        user-select: none;
+    }
+
+    &__circle {
+        stroke: #ffffff;
+        stroke-width: 1;
+        fill: none;
+        width: 20px;
+        height: 20px;
+        margin: 0 10px 0 10px;
+    }
+
+    &__item {
+        @include flex-row;
+        align-items: center;
+
+        &:hover .nav__circle {
+            fill: #ffffff;
+        }
+    }  
+}
+
+@media screen and (max-width: 1200px) {
+    .nav {
+        width: 46%;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: initial;
+        flex-direction: column;
+        width: 22%;
+
+        &__list {
+            clear: none;
+            flex-direction: column;
+            display: none;
+        }
+
+        &__link {
+            display: block;
+            padding: 30px 0 30px 10px;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        &__icon {
+            user-select: initial;
+            display: initial;
+            padding: 0 20px 0 0;
+        }
+
+        &__item {
+            
+            &:hover {
+                background: linear-gradient(45deg, #7a78ff, transparent);
+            }
+        }
+    }
+
+    .navicon {
+        width: 35%;
+    }
+}

@@ -1,0 +1,68 @@
+@import '_mixins.scss';
+
+.image-block {
+    display: flex;
+    flex-flow: row wrap;
+    width: 1170px;
+
+    &__inner {
+        @include space-between;
+        flex-flow: row wrap;
+        align-content: space-between;
+        width: 580px;
+        height: 438px;   
+    }
+
+    &__item {
+        cursor: pointer;
+        height: 214px;
+
+        &:hover .image-block__img {
+            filter: brightness(60%);
+            transition: all 1s ease;
+        }
+        
+        &--lg {
+            height: 438px;
+            margin-right: 10px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        transition: .05s;
+    }
+}
+
+@media screen and (max-width: 1190px) {
+    .image-block {
+        width: 100%;
+        height: 896px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .image-block {
+        height: 100%;
+        flex-flow: column nowrap;
+
+        &__item{
+            width: 100%;
+            height: initial;
+
+
+            &--lg {
+                width: 100%;
+                
+            }
+        }
+
+        &__inner {
+            height: 100%;
+            width: 100%;
+            flex-flow: column nowrap;
+            justify-content: initial;
+        }
+    }
+}

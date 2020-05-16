@@ -1,0 +1,67 @@
+@import '_mixins.scss';
+
+.description-wrapper {
+    width: 50%;
+    height: 100%;
+    @include flex-justify-center-column;
+}
+
+.description {
+    padding-left: 70px;
+    font-family: "GothamBook", sans-serif;
+
+    &--padding-right {
+        padding-right: 70px;
+        padding-left: 0;
+    }
+
+    &__suptitle {
+        font-size: 21px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    &__title {
+        font-family: "gothambold1", sans-serif;
+        margin-bottom: 40px;
+        font-size: 44px;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .description {
+        padding-right: 5%;
+
+        &--padding-right {
+            padding: 0 5% 0 5%;
+            
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+
+    .description {
+        margin-top: 50px;
+
+        &__text {
+            font-size: 26px;
+        }
+    }
+
+    .description-wrapper {
+        width: 75%;
+        
+        &--change-order {
+            &:nth-child(1) {
+                order: 2;
+            }
+        }
+    }
+}
